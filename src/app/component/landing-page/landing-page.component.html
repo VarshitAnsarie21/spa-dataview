@@ -1,28 +1,56 @@
 <div class="home-page">
   <app-header></app-header>
   <div justify="center" class="home-page-inner-container">
-    <div variant="outlined" class="home-page-admin-card">
-      <form action="">
-        <span class="label">Select Type:</span>
-        <select
-          name="complaint_type"
-          style="width: 50%; margin-top: 20px"
-          class="form-control"
-        >
-          <option>Select</option>
-          <option>Landline</option>
-          <option>Brodband</option>
-        </select>
-        <br />
-        <br />
-        <Button
-          type="primary"
-          class="home-page-login-button"
-        >
-          Raise Complaint
+    <!-- <div variant="outlined" class="home-page-admin-card"> -->
+    <form action="" class="home-page-form">
+      <span class="label tags">Environment:</span>
+      <select
+        name="complaint_type"
+        class="dropdown-first"
+        (change)="typeEnvSelected($event)"
+        required
+      >
+        <option>Select</option>
+        <option>Devlopement</option>
+        <option>Testing</option>
+        <option>Production</option>
+      </select>
+      <br />
+      <span class="label tags">Table Name:</span>
+      <select
+        name="complaint_type"
+        class="dropdown-second"
+        (change)="typeTableSelected($event)"
+        required
+      >
+        <option>Select</option>
+        <option>Customer</option>
+        <option>Employee</option>
+        <option>Order</option>
+        <option>Other</option>
+      </select>
+
+      <div action="" *ngIf="updateStatus" class="table-text-field">
+        <span class="tags">Enter Table Name:</span><br />
+        <input
+          class="home-page-input"
+          name="tableName"
+          placeholder="Enter Table"
+          (change)="enterTable($event)"
+          required
+        />
+      </div>
+
+      <div class="button-div">
+        <Button type="primary" class="home-page-button" (click)="clearData()">
+          Clear
         </Button>
-      </form>
-    </div>
+        <Button type="primary" class="home-page-button" (click)="fetchData()">
+          Submit
+        </Button>
+      </div>
+    </form>
+    <!-- </div> -->
   </div>
 </div>
 <app-footer></app-footer>
