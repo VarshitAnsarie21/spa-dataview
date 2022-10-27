@@ -112,12 +112,12 @@
       <table class="center" *ngIf="producerStatus">
         <thead>
           <tr>
-            <th scope="col">CUSTOMER ID</th>
-            <th scope="col">CUSTOMER NAME</th>
-            <th scope="col">CUSTOMER AGE</th>
-            <th scope="col">CUSTOMER ADDRESS</th>
-            <th scope="col">CUSTOMER POSTALCODE</th>
-            <th scope="col">CUSTOMER POSTALCODE</th>
+            <th scope="col">PRODUCER ID</th>
+            <th scope="col">PRODUCER NAME</th>
+            <th scope="col">PRODUCER AGE</th>
+            <th scope="col">PRODUCER PRICE</th>
+            <th scope="col">PRODUCER ADDRESS</th>
+            <th scope="col">PRODUCER STATE CODE</th>
             <!-- <th scope="col">status</th>
               <th scope="col">Delete Complaint</th> -->
           </tr>
@@ -129,7 +129,7 @@
               <td>{{ producer.producerName }}</td>
               <td>{{ producer.productName }}</td>
               <td>{{ producer.productPrice }}</td>
-              <td>{{ producer.Address }}</td>
+              <td>{{ producer.address }}</td>
               <td>{{ producer.stateCode }}</td>
             </tr>
           <!-- <tr>
@@ -145,11 +145,11 @@
       <table class="center" *ngIf="productStatus">
         <thead>
           <tr>
-            <th scope="col">CUSTOMER ID</th>
-            <th scope="col">CUSTOMER NAME</th>
-            <th scope="col">CUSTOMER AGE</th>
-            <th scope="col">CUSTOMER ADDRESS</th>
-            <th scope="col">CUSTOMER POSTALCODE</th>
+            <th scope="col">PRODUCT ID</th>
+            <th scope="col">PRODUCT NAME</th>
+            <th scope="col">PRODUCT CATEGORY</th>
+            <th scope="col">PRODUCT QUANTITY</th>
+            <th scope="col">PRODUCT PRICE</th>
             <!-- <th scope="col">status</th>
               <th scope="col">Delete Complaint</th> -->
           </tr>

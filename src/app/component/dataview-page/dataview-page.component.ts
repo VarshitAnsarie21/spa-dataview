@@ -22,25 +22,27 @@ export class DataviewPageComponent implements OnInit {
   producerStatus: boolean = false;
   employeeStatus: boolean = false;
 
-  constructor() {
+  selectedTable!: string;
+
+  constructor(private datafetchService: DatafetchServiceService) {
     this.data = JSON.parse(sessionStorage.getItem('details')!);
-    console.log(this.data[0].cu);
+    console.log(this.data[0]);
 
-    this.employees = this.data;
-    this.customers = this.data;
-    this.producers = this.data;
-    this.products = this.data;
+    this.selectedTable = datafetchService.getSelectTable();
+    console.log(this.selectedTable);
 
-    if (this.employees != null) {
+    if (this.selectedTable == 'Employee') {
       this.employeeStatus = true;
       this.employees = this.data;
-    } else if (this.customers != null) {
+    } else if (this.selectedTable == 'Customer') {
       this.customerStatus = true;
       this.customers = this.data;
-    } else if (this.products != null) {
+    } else if (this.selectedTable == 'Product') {
       this.productStatus = true;
-    } else if (this.producers != null) {
+      this.products = this.data;
+    } else if (this.selectedTable == 'Producer') {
       this.producerStatus = true;
+      this.producers = this.data;
     }
     console.log(this.employees);
   }

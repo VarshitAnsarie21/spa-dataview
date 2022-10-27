@@ -11,6 +11,8 @@ import { Producers } from '../models/producer';
 })
 export class DatafetchServiceService {
 
+  tableName!: string;
+
   constructor(private _httpClient: HttpClient) { }
 
   private employeeUrl: string = 'http://localhost:8082/GetAllEmployee';
@@ -37,6 +39,13 @@ export class DatafetchServiceService {
     return this._httpClient.get<Producers[]>(this.producerUrl);
   }
 
+  setSelectTable(tableName: any){
+    this.tableName = tableName
+  }
+
+  getSelectTable(){
+    return this.tableName
+  }
   // statusUpdateDetails = {};
 
   // private regComplaintUrl: string =

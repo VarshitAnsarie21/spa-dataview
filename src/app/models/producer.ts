@@ -7,7 +7,7 @@ export class Producers {
 
     productPrice!: string;
 
-    Address!: string;
+    address!: string;
 
     stateCode!: string;
   }
