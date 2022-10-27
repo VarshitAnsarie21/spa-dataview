@@ -1,8 +1,11 @@
 export class Customers {
-    // customerEmail: string;
-    // customerPassword: string;
-    // customerName: string;
-    // customerMobile: string;
-    // customerAddress: string;
-    // customerPincode: string;
+  customerId!: BigInteger;
+
+  customerName!: String;
+
+  customerAge!: BigInteger;
+
+  customerAddress!: string;
+
+  postalCode!: string;
   }

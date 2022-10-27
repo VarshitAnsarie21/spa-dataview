@@ -47,12 +47,13 @@
       <div>
         <span class="head">RECORDS CONTAINS IN GIVEN TABLE</span>
       </div>
-      <table class="center">
+      <table class="center" *ngIf="employeeStatus">
         <thead>
           <tr>
             <th scope="col">EMPLOYEE ID</th>
             <th scope="col">EMPLOYEE NAME</th>
             <th scope="col">EMPLOYEE DESIGNATION</th>
+            <th scope="col">EMPLOYEE PHONE</th>
             <th scope="col">EMPLOYEE PHONE</th>
             <!-- <th scope="col">status</th>
               <th scope="col">Delete Complaint</th> -->
@@ -60,19 +61,114 @@
         </thead>
 
         <tbody>
-          <!-- <tr *ngFor="let complaint of complaints">
-              <td scope="row">{{ complaint.ticketId }}</td>
-              <td>{{ complaint.customerEmail }}</td>
-              <td>{{ complaint.complaint }}</td>
-              <td>{{ complaint.pincode }}</td>
-              <td>{{ complaint.status }}</td>
-            </tr> -->
+          <tr *ngFor="let employee of employees">
+              <td scope="row">{{ employee.employeeId }}</td>
+              <td>{{ employee.designation }}</td>
+              <td>{{ employee.emailId }}</td>
+              <td>{{ employee.employeeName }}</td>
+              <td>{{ employee.phoneNo }}</td>
+            </tr>
+          <!-- <tr>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+          </tr> -->
+          <br />
+        </tbody>
+      </table>
+
+      <table class="center" *ngIf="customerStatus">
+        <thead>
           <tr>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
+            <th scope="col">CUSTOMER ID</th>
+            <th scope="col">CUSTOMER NAME</th>
+            <th scope="col">CUSTOMER AGE</th>
+            <th scope="col">CUSTOMER ADDRESS</th>
+            <th scope="col">CUSTOMER POSTALCODE</th>
+            <!-- <th scope="col">status</th>
+              <th scope="col">Delete Complaint</th> -->
           </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let customer of customers">
+              <td scope="row">{{ customer.customerId }}</td>
+              <td>{{ customer.customerName }}</td>
+              <td>{{ customer.customerAge }}</td>
+              <td>{{ customer.customerAddress }}</td>
+              <td>{{ customer.postalCode }}</td>
+            </tr>
+          <!-- <tr>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+          </tr> -->
+          <br />
+        </tbody>
+      </table>
+
+      <table class="center" *ngIf="producerStatus">
+        <thead>
+          <tr>
+            <th scope="col">CUSTOMER ID</th>
+            <th scope="col">CUSTOMER NAME</th>
+            <th scope="col">CUSTOMER AGE</th>
+            <th scope="col">CUSTOMER ADDRESS</th>
+            <th scope="col">CUSTOMER POSTALCODE</th>
+            <th scope="col">CUSTOMER POSTALCODE</th>
+            <!-- <th scope="col">status</th>
+              <th scope="col">Delete Complaint</th> -->
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let producer of producers">
+              <td scope="row">{{ producer.producerId }}</td>
+              <td>{{ producer.producerName }}</td>
+              <td>{{ producer.productName }}</td>
+              <td>{{ producer.productPrice }}</td>
+              <td>{{ producer.Address }}</td>
+              <td>{{ producer.stateCode }}</td>
+            </tr>
+          <!-- <tr>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+          </tr> -->
+          <br />
+        </tbody>
+      </table>
+
+      <table class="center" *ngIf="productStatus">
+        <thead>
+          <tr>
+            <th scope="col">CUSTOMER ID</th>
+            <th scope="col">CUSTOMER NAME</th>
+            <th scope="col">CUSTOMER AGE</th>
+            <th scope="col">CUSTOMER ADDRESS</th>
+            <th scope="col">CUSTOMER POSTALCODE</th>
+            <!-- <th scope="col">status</th>
+              <th scope="col">Delete Complaint</th> -->
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let product of products">
+              <td scope="row">{{ product.productId }}</td>
+              <td>{{ product.productName }}</td>
+              <td>{{ product.productCategory }}</td>
+              <td>{{ product.productQuantity }}</td>
+              <td>{{ product.productPrice }}</td>
+            </tr>
+          <!-- <tr>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+            <td scope="row">KJBAJKB</td>
+          </tr> -->
           <br />
         </tbody>
       </table>

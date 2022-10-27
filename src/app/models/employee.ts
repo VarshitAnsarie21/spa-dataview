@@ -1,8 +1,7 @@
 export class Employee {
-    // customerEmail: string;
-    // customerPassword: string;
-    // customerName: string;
-    // customerMobile: string;
-    // customerAddress: string;
-    // customerPincode: string;
-  }
+  employeeId!: BigInteger;
+  employeeName!: string;
+  emailId!: string;
+  phoneNo!: string;
+  designation!: string;
+}
