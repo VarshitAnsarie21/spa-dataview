@@ -49,25 +49,26 @@
       </div>
       <table class="center" *ngIf="employeeStatus">
         <thead>
-          <tr>
+          <!-- <tr>
             <th scope="col">EMPLOYEE ID</th>
             <th scope="col">EMPLOYEE NAME</th>
             <th scope="col">EMPLOYEE DESIGNATION</th>
             <th scope="col">EMPLOYEE PHONE</th>
             <th scope="col">EMPLOYEE PHONE</th>
-            <!-- <th scope="col">status</th>
-              <th scope="col">Delete Complaint</th> -->
+          </tr> -->
+          <tr>
+            <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
           </tr>
         </thead>
 
         <tbody>
           <tr *ngFor="let employee of employees">
-              <td scope="row">{{ employee.employeeId }}</td>
-              <td>{{ employee.designation }}</td>
-              <td>{{ employee.emailId }}</td>
-              <td>{{ employee.employeeName }}</td>
-              <td>{{ employee.phoneNo }}</td>
-            </tr>
+            <td scope="row">{{ employee.employeeId }}</td>
+            <td>{{ employee.designation }}</td>
+            <td>{{ employee.emailId }}</td>
+            <td>{{ employee.employeeName }}</td>
+            <td>{{ employee.phoneNo }}</td>
+          </tr>
           <!-- <tr>
             <td scope="row">KJBAJKB</td>
             <td scope="row">KJBAJKB</td>
@@ -80,25 +81,26 @@
 
       <table class="center" *ngIf="customerStatus">
         <thead>
-          <tr>
+          <!-- <tr>
             <th scope="col">CUSTOMER ID</th>
             <th scope="col">CUSTOMER NAME</th>
             <th scope="col">CUSTOMER AGE</th>
             <th scope="col">CUSTOMER ADDRESS</th>
             <th scope="col">CUSTOMER POSTALCODE</th>
-            <!-- <th scope="col">status</th>
-              <th scope="col">Delete Complaint</th> -->
+          </tr> -->
+          <tr>
+            <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
           </tr>
         </thead>
 
         <tbody>
           <tr *ngFor="let customer of customers">
-              <td scope="row">{{ customer.customerId }}</td>
-              <td>{{ customer.customerName }}</td>
-              <td>{{ customer.customerAge }}</td>
-              <td>{{ customer.customerAddress }}</td>
-              <td>{{ customer.postalCode }}</td>
-            </tr>
+            <td scope="row">{{ customer.customerId }}</td>
+            <td>{{ customer.customerName }}</td>
+            <td>{{ customer.customerAge }}</td>
+            <td>{{ customer.customerAddress }}</td>
+            <td>{{ customer.postalCode }}</td>
+          </tr>
           <!-- <tr>
             <td scope="row">KJBAJKB</td>
             <td scope="row">KJBAJKB</td>
@@ -111,27 +113,28 @@
 
       <table class="center" *ngIf="producerStatus">
         <thead>
-          <tr>
+          <!-- <tr>
             <th scope="col">PRODUCER ID</th>
             <th scope="col">PRODUCER NAME</th>
             <th scope="col">PRODUCER AGE</th>
             <th scope="col">PRODUCER PRICE</th>
             <th scope="col">PRODUCER ADDRESS</th>
             <th scope="col">PRODUCER STATE CODE</th>
-            <!-- <th scope="col">status</th>
-              <th scope="col">Delete Complaint</th> -->
+          </tr> -->
+          <tr>
+            <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
           </tr>
         </thead>
 
         <tbody>
           <tr *ngFor="let producer of producers">
-              <td scope="row">{{ producer.producerId }}</td>
-              <td>{{ producer.producerName }}</td>
-              <td>{{ producer.productName }}</td>
-              <td>{{ producer.productPrice }}</td>
-              <td>{{ producer.address }}</td>
-              <td>{{ producer.stateCode }}</td>
-            </tr>
+            <td scope="row">{{ producer.producerId }}</td>
+            <td>{{ producer.producerName }}</td>
+            <td>{{ producer.productName }}</td>
+            <td>{{ producer.productPrice }}</td>
+            <td>{{ producer.address }}</td>
+            <td>{{ producer.stateCode }}</td>
+          </tr>
           <!-- <tr>
             <td scope="row">KJBAJKB</td>
             <td scope="row">KJBAJKB</td>
@@ -144,25 +147,26 @@
 
       <table class="center" *ngIf="productStatus">
         <thead>
-          <tr>
+          <!-- <tr>
             <th scope="col">PRODUCT ID</th>
             <th scope="col">PRODUCT NAME</th>
             <th scope="col">PRODUCT CATEGORY</th>
             <th scope="col">PRODUCT QUANTITY</th>
             <th scope="col">PRODUCT PRICE</th>
-            <!-- <th scope="col">status</th>
-              <th scope="col">Delete Complaint</th> -->
+          </tr> -->
+          <tr>
+            <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
           </tr>
         </thead>
 
         <tbody>
           <tr *ngFor="let product of products">
-              <td scope="row">{{ product.productId }}</td>
-              <td>{{ product.productName }}</td>
-              <td>{{ product.productCategory }}</td>
-              <td>{{ product.productQuantity }}</td>
-              <td>{{ product.productPrice }}</td>
-            </tr>
+            <td scope="row">{{ product.productId }}</td>
+            <td>{{ product.productName }}</td>
+            <td>{{ product.productCategory }}</td>
+            <td>{{ product.productQuantity }}</td>
+            <td>{{ product.productPrice }}</td>
+          </tr>
           <!-- <tr>
             <td scope="row">KJBAJKB</td>
             <td scope="row">KJBAJKB</td>

@@ -22,6 +22,8 @@ export class DataviewPageComponent implements OnInit {
   producerStatus: boolean = false;
   employeeStatus: boolean = false;
 
+  tableHeader:any;
+
   selectedTable!: string;
 
   constructor(private datafetchService: DatafetchServiceService) {
@@ -34,15 +36,19 @@ export class DataviewPageComponent implements OnInit {
     if (this.selectedTable == 'Employee') {
       this.employeeStatus = true;
       this.employees = this.data;
+      this.tableHeader = Object.keys(this.employees[0]);
     } else if (this.selectedTable == 'Customer') {
       this.customerStatus = true;
       this.customers = this.data;
+      this.tableHeader = Object.keys(this.customers[0]);
     } else if (this.selectedTable == 'Product') {
       this.productStatus = true;
       this.products = this.data;
+      this.tableHeader = Object.keys(this.products[0]);
     } else if (this.selectedTable == 'Producer') {
       this.producerStatus = true;
       this.producers = this.data;
+      this.tableHeader = Object.keys(this.producers[0]);
     }
     console.log(this.employees);
   }
