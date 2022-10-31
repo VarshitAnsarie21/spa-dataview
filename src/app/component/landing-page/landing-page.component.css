@@ -42,6 +42,16 @@
   background: #71b7e6;
 }
 
+.head {
+  font-family: GlacialIndiffernce;
+  text-align: center;
+  font-size: 30px !important;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 240px;
+  margin-top: 150px;
+}
+
 .tags {
   color: #fff;
   font-size: 22px;
