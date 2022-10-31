@@ -76,7 +76,7 @@ export class LandingPageComponent implements OnInit {
       this.selectedEnv != undefined &&
       this.selectedTable != undefined &&
       this.selectedTable != 'Other' &&
-      this.customTableName == undefined
+      this.customTableName == undefined 
     ) {
       this.datafetchService.setSelectTable(this.selectedTable);
       if (this.selectedTable == 'Employee') {

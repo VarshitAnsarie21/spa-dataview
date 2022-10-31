@@ -1,47 +1,7 @@
 <div class="home-page">
   <app-header></app-header>
-  <!-- <header>
-      <button type="primary" class="logout-button" >
-        LOGOUT
-      </button>
-    </header> -->
+
   <div class="view-customer-div">
-    <!-- <div>
-        <div class="customer-detail-menu-card">
-          <div>
-            <span class="after-customer-login-page-menu-title"
-              >Admin Dashboard
-            </span>
-            <button class="customer-detail-menu-button" variant="primary">
-              <a href="/admin-view-managers">View Managers</a>
-            </button>
-            <br />
-            <button class="customer-detail-menu-button" variant="primary">
-              <a href="/admin-view-engineers">View Engineers</a>
-            </button>
-            <br />
-            <button class="customer-detail-menu-button" variant="primary">
-              <a href="/admin-view-customers">View Customers</a>
-            </button>
-            <br />
-            <button class="customer-detail-menu-button" variant="primary">
-              <a href="/admin-view-complaints">View Complaints</a>
-            </button>
-            <br />
-            <button class="customer-detail-menu-button" variant="primary">
-              <a href="/admin-view-feedbacks">View Feedbacks</a>
-            </button>
-            <br />
-            <button class="customer-detail-menu-button" variant="primary">
-              <a href="admin-add-Manager">Add Managers</a>
-            </button>
-            <br />
-            <button class="customer-detail-menu-button" variant="primary">
-              <a href="admin-add-engineer">Add Engineers</a>
-            </button>
-          </div>
-        </div>
-      </div> -->
     <br />
     <div>
       <div>
@@ -49,13 +9,6 @@
       </div>
       <table class="center" *ngIf="employeeStatus">
         <thead>
-          <!-- <tr>
-            <th scope="col">EMPLOYEE ID</th>
-            <th scope="col">EMPLOYEE NAME</th>
-            <th scope="col">EMPLOYEE DESIGNATION</th>
-            <th scope="col">EMPLOYEE PHONE</th>
-            <th scope="col">EMPLOYEE PHONE</th>
-          </tr> -->
           <tr>
             <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
           </tr>
@@ -69,25 +22,12 @@
             <td>{{ employee.employeeName }}</td>
             <td>{{ employee.phoneNo }}</td>
           </tr>
-          <!-- <tr>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-          </tr> -->
           <br />
         </tbody>
       </table>
 
       <table class="center" *ngIf="customerStatus">
         <thead>
-          <!-- <tr>
-            <th scope="col">CUSTOMER ID</th>
-            <th scope="col">CUSTOMER NAME</th>
-            <th scope="col">CUSTOMER AGE</th>
-            <th scope="col">CUSTOMER ADDRESS</th>
-            <th scope="col">CUSTOMER POSTALCODE</th>
-          </tr> -->
           <tr>
             <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
           </tr>
@@ -101,26 +41,12 @@
             <td>{{ customer.customerAddress }}</td>
             <td>{{ customer.postalCode }}</td>
           </tr>
-          <!-- <tr>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-          </tr> -->
           <br />
         </tbody>
       </table>
 
       <table class="center" *ngIf="producerStatus">
         <thead>
-          <!-- <tr>
-            <th scope="col">PRODUCER ID</th>
-            <th scope="col">PRODUCER NAME</th>
-            <th scope="col">PRODUCER AGE</th>
-            <th scope="col">PRODUCER PRICE</th>
-            <th scope="col">PRODUCER ADDRESS</th>
-            <th scope="col">PRODUCER STATE CODE</th>
-          </tr> -->
           <tr>
             <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
           </tr>
@@ -135,25 +61,13 @@
             <td>{{ producer.address }}</td>
             <td>{{ producer.stateCode }}</td>
           </tr>
-          <!-- <tr>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-          </tr> -->
+
           <br />
         </tbody>
       </table>
 
       <table class="center" *ngIf="productStatus">
         <thead>
-          <!-- <tr>
-            <th scope="col">PRODUCT ID</th>
-            <th scope="col">PRODUCT NAME</th>
-            <th scope="col">PRODUCT CATEGORY</th>
-            <th scope="col">PRODUCT QUANTITY</th>
-            <th scope="col">PRODUCT PRICE</th>
-          </tr> -->
           <tr>
             <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
           </tr>
@@ -167,12 +81,7 @@
             <td>{{ product.productQuantity }}</td>
             <td>{{ product.productPrice }}</td>
           </tr>
-          <!-- <tr>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-            <td scope="row">KJBAJKB</td>
-          </tr> -->
+
           <br />
         </tbody>
       </table>
