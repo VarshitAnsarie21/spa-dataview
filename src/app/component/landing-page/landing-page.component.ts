@@ -39,71 +39,41 @@ export class LandingPageComponent implements OnInit {
   }
 
   fetchData(): any {
-    console.log('inside getemplyee() !');
-    // this.employeeService
-    //   .getAllEmployees()
-    //   .subscribe((data) => {
-    //     console.log(data)
-    //     //alert('Successfully Registered !');
-    //   });
-    // this._router.navigate(['/customer-dashboard'], { state: data });
-
-    // this._customersService
-    //   .validateCustomer(this.loginForm.value)
-    //   .subscribe((data) => {
-    //     if (data) {
-    //       this.customerLoggedIn = this.loginForm.value['customerEmail'];
-    //       this._customersService.setCustomerLoggedIn(
-    //         this.customerLoggedIn.toString()
-    //       );
-
-    //       console.log(
-    //         'Customer Exists : reached safely !',
-    //         this.customerLoggedIn
-    //       );
-    //       sessionStorage.setItem('loggedUser', JSON.stringify(data));
-    //       this._router.navigate(['/customer-dashboard'], { state: data });
-    //     } else {
-    //       console.log('Customer does not exists !');
-    //       alert("Customer doesn't exist !")
-    //     }
-    //     this._customersService.validateCustomer(this.customer).subscribe(() => {
-    //       alert('incorrect Email and Password !');
-    //     });
-    //   });
-
+    console.log('inside fetchData() !');
     if (
       this.selectedEnv != undefined &&
       this.selectedTable != undefined &&
       this.selectedTable != 'Other' &&
-      this.customTableName == undefined 
+      this.customTableName == undefined
     ) {
+
       this.datafetchService.setSelectTable(this.selectedTable);
+
       if (this.selectedTable == 'Employee') {
         this.datafetchService.getAllEmployees().subscribe((data) => {
           console.log(data);
-          //alert('Successfully Registered !');
+
           sessionStorage.setItem('details', JSON.stringify(data));
           this.router.navigate(['/dataview'], { state: data });
         });
       } else if (this.selectedTable == 'Producer') {
         this.datafetchService.getAllProducers().subscribe((data) => {
           console.log(data);
-          //alert('Successfully Registered !');
+
           sessionStorage.setItem('details', JSON.stringify(data));
           this.router.navigate(['/dataview'], { state: data });
         });
       } else if (this.selectedTable == 'Product') {
         this.datafetchService.getAllProduct().subscribe((data) => {
           console.log(data);
-          //alert('Successfully Registered !');
+
           sessionStorage.setItem('details', JSON.stringify(data));
           this.router.navigate(['/dataview'], { state: data });
         });
       } else if (this.selectedTable == 'Customer') {
         this.datafetchService.getAllCustomer().subscribe((data) => {
           console.log(data);
-          //alert('Successfully Registered !');
+
           sessionStorage.setItem('details', JSON.stringify(data));
           this.router.navigate(['/dataview'], { state: data });
         });
@@ -115,33 +85,32 @@ export class LandingPageComponent implements OnInit {
       this.customTableName != undefined &&
       this.selectedTable == 'Other'
     ) {
-      
       this.datafetchService.setSelectTable(this.customTableName);
 
       if (this.customTableName == 'Employee') {
         this.datafetchService.getAllEmployees().subscribe((data) => {
           console.log(data);
-          //alert('Successfully Registered !');
+          
           sessionStorage.setItem('details', JSON.stringify(data));
           this.router.navigate(['/dataview'], { state: data });
         });
       } else if (this.customTableName == 'Producer') {
         this.datafetchService.getAllProducers().subscribe((data) => {
           console.log(data);
-          //alert('Successfully Registered !');
+         
           this.router.navigate(['/dataview'], { state: data });
         });
       } else if (this.customTableName == 'Product') {
         this.datafetchService.getAllProduct().subscribe((data) => {
           console.log(data);
-          //alert('Successfully Registered !');
+          
           sessionStorage.setItem('details', JSON.stringify(data));
           this.router.navigate(['/dataview'], { state: data });
         });
       } else if (this.customTableName == 'Customer') {
         this.datafetchService.getAllCustomer().subscribe((data) => {
           console.log(data);
-          //alert('Successfully Registered !');
+          
           sessionStorage.setItem('details', JSON.stringify(data));
           this.router.navigate(['/dataview'], { state: data });
         });

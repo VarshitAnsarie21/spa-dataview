@@ -32,7 +32,6 @@ header {
   font-family: monospace;
   border-collapse: collapse;
   width: 100%;
-  /* margin-left: 150px; */
   margin-top: 15px;
 }
 
@@ -52,7 +51,6 @@ tbody.td.button.danger {
   font-size: 50px !important;
   font-weight: bold;
   color: #fff;
-  /* margin-left: 400px; */
 }
 
 .center td,
