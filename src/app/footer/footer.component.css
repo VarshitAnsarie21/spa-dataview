@@ -1,9 +1,10 @@
-/* .title {
-  font-size: 38px;
+.title {
+  font-size: 30px;
   color: whitesmoke;
   font-family: "GlacialIndiffernce";
   text-align: center;
-} */
+  margin-left: 470px;
+}
 
 .page-header {
   background: #294c7c;

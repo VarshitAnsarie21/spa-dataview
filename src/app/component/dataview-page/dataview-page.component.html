@@ -4,87 +4,94 @@
   <div class="view-customer-div">
     <br />
     <div>
-      <div>
-        <span class="head">RECORDS CONTAINS IN GIVEN TABLE</span>
+      <div *ngIf="employeeStatus">
+        <span class="head">RECORDS CONTAINS IN EMPLOYEE TABLE</span>
+        <table class="center">
+          <thead>
+            <tr>
+              <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let employee of employees">
+              <td scope="row">{{ employee.employeeId }}</td>
+              <td>{{ employee.designation }}</td>
+              <td>{{ employee.emailId }}</td>
+              <td>{{ employee.employeeName }}</td>
+              <td>{{ employee.phoneNo }}</td>
+            </tr>
+            <br />
+          </tbody>
+        </table>
       </div>
-      <table class="center" *ngIf="employeeStatus">
-        <thead>
-          <tr>
-            <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
-          </tr>
-        </thead>
 
-        <tbody>
-          <tr *ngFor="let employee of employees">
-            <td scope="row">{{ employee.employeeId }}</td>
-            <td>{{ employee.designation }}</td>
-            <td>{{ employee.emailId }}</td>
-            <td>{{ employee.employeeName }}</td>
-            <td>{{ employee.phoneNo }}</td>
-          </tr>
-          <br />
-        </tbody>
-      </table>
+      <div *ngIf="customerStatus">
+        <span class="head">RECORDS CONTAINS IN CUSTOMER TABLE</span>
+        <table class="center">
+          <thead>
+            <tr>
+              <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
+            </tr>
+          </thead>
 
-      <table class="center" *ngIf="customerStatus">
-        <thead>
-          <tr>
-            <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
-          </tr>
-        </thead>
+          <tbody>
+            <tr *ngFor="let customer of customers">
+              <td scope="row">{{ customer.customerId }}</td>
+              <td>{{ customer.customerName }}</td>
+              <td>{{ customer.customerAge }}</td>
+              <td>{{ customer.customerAddress }}</td>
+              <td>{{ customer.postalCode }}</td>
+            </tr>
+            <br />
+          </tbody>
+        </table>
+      </div>
 
-        <tbody>
-          <tr *ngFor="let customer of customers">
-            <td scope="row">{{ customer.customerId }}</td>
-            <td>{{ customer.customerName }}</td>
-            <td>{{ customer.customerAge }}</td>
-            <td>{{ customer.customerAddress }}</td>
-            <td>{{ customer.postalCode }}</td>
-          </tr>
-          <br />
-        </tbody>
-      </table>
+      <div *ngIf="producerStatus">
+        <span class="head">RECORDS CONTAINS IN PRODUCER TABLE</span>
+        <table class="center">
+          <thead>
+            <tr>
+              <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
+            </tr>
+          </thead>
 
-      <table class="center" *ngIf="producerStatus">
-        <thead>
-          <tr>
-            <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
-          </tr>
-        </thead>
+          <tbody>
+            <tr *ngFor="let producer of producers">
+              <td scope="row">{{ producer.producerId }}</td>
+              <td>{{ producer.producerName }}</td>
+              <td>{{ producer.productName }}</td>
+              <td>{{ producer.productPrice }}</td>
+              <td>{{ producer.address }}</td>
+              <td>{{ producer.stateCode }}</td>
+            </tr>
+            <br />
+          </tbody>
+        </table>
+      </div>
 
-        <tbody>
-          <tr *ngFor="let producer of producers">
-            <td scope="row">{{ producer.producerId }}</td>
-            <td>{{ producer.producerName }}</td>
-            <td>{{ producer.productName }}</td>
-            <td>{{ producer.productPrice }}</td>
-            <td>{{ producer.address }}</td>
-            <td>{{ producer.stateCode }}</td>
-          </tr>
+      <div *ngIf="productStatus">
+        <span class="head">RECORDS CONTAINS IN PRODUCT TABLE</span>
+        <table class="center">
+          <thead>
+            <tr>
+              <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
+            </tr>
+          </thead>
 
-          <br />
-        </tbody>
-      </table>
-
-      <table class="center" *ngIf="productStatus">
-        <thead>
-          <tr>
-            <th *ngFor="let label of tableHeader" scope="col">{{ label }}</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr *ngFor="let product of products">
-            <td scope="row">{{ product.productId }}</td>
-            <td>{{ product.productName }}</td>
-            <td>{{ product.productCategory }}</td>
-            <td>{{ product.productQuantity }}</td>
-            <td>{{ product.productPrice }}</td>
-          </tr>
-
-          <br />
-        </tbody>
-      </table>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td scope="row">{{ product.productId }}</td>
+              <td>{{ product.productName }}</td>
+              <td>{{ product.productCategory }}</td>
+              <td>{{ product.productQuantity }}</td>
+              <td>{{ product.productPrice }}</td>
+            </tr>
+            <br />
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
